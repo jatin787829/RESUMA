@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    body {
+      background: linear-gradient(to bottom, #f7f7f7, #e2e2e2);
+      min-height: 100vh;
+    }
+
+    .bg-dark-gradient {
+      background: linear-gradient(to bottom, #111, #333);
+    }
+
+    .card:hover {
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <!-- Hero Section -->
+  <section class="container text-center py-5">
+    <h1 class="display-4 fw-bold">John Doe</h1>
+    <p class="lead">Full Stack Developer | UI/UX Enthusiast | Problem Solver</p>
+    <button class="btn btn-primary me-2">Download Resume</button>
+    <button class="btn btn-outline-secondary">Contact Me</button>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="container py-5">
+    <h2 class="text-center fw-semibold">About Me</h2>
+    <p class="text-center mx-auto" style="max-width: 600px;">
+      I'm a passionate full-stack developer with 5 years of experience in creating robust and scalable web applications.
+      I love turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, you'll find me
+      exploring new technologies or contributing to open-source projects.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="container bg-white text-center py-5">
+    <h2 class="fw-semibold">Skills</h2>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 py-4">
+      <div class="col" *ngFor="let skill of skills">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">JavaScript</h5>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">React</h5>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">Node.js</h5>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">Python</h5>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">SQL</h5>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">GraphQL</h5>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">AWS</h5>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">Docker</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="container py-5">
+    <h2 class="text-center fw-semibold">Projects</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 py-4">
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">E-commerce Platform</h5>
+            <p class="card-text">A full-stack e-commerce solution built with React and Node.js</p>
+            <button class="btn btn-outline-secondary">View Project</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Task Management App</h5>
+            <p class="card-text">A React Native mobile app for efficient task management</p>
+            <button class="btn btn-outline-secondary">View Project</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Data Visualization Dashboard</h5>
+            <p class="card-text">An interactive dashboard using D3.js and React</p>
+            <button class="btn btn-outline-secondary">View Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="container bg-white py-5">
+    <h2 class="text-center fw-semibold">Get in Touch</h2>
+    <form onsubmit="handleSubmit(event)" class="mx-auto" style="max-width: 500px;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <div class="d-flex justify-content-center mb-3">
+      <a href="#" class="text-secondary mx-2"><i class="bi bi-github"></i></a>
+      <a href="#" class="text-secondary mx-2"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="text-secondary mx-2"><i class="bi bi-envelope"></i></a>
+      <a href="#" class="text-secondary mx-2"><i class="bi bi-phone"></i></a>
+    </div>
+    <p class="text-muted small">&copy; 2024 John Doe. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      console.log("Form submitted:", { name, email, message });
+      document.getElementById("name").value = '';
+      document.getElementById("email").value = '';
+      document.getElementById("message").value = '';
+    }
+  </script>
+</body>
+
+</html>

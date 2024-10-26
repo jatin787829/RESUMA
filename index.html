@@ -1,176 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Custom styles */
-    body {
-      background: linear-gradient(to bottom, #f7f7f7, #e2e2e2);
-      min-height: 100vh;
-    }
-
-    .bg-dark-gradient {
-      background: linear-gradient(to bottom, #111, #333);
-    }
-
-    .card:hover {
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JATIN KUMAR - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('26-266973_image-page-transparent-background-oasis-skin-1-png.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f8f9fa;
+        }
+        .hero-section {
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            padding-top: 80px;
+        }
+        .content-section {
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .skill-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        .social-icon {
+            font-size: 1.5rem;
+            color: #6c757d;
+            transition: color 0.3s ease-in-out;
+        }
+        .social-icon:hover {
+            color: #343a40;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+        }
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar {
+            transition: background-color 0.3s ease;
+        }
+        .navbar.scrolled {
+            background-color: rgba(0,0,0,0.8) !important;
+        }
+        .progress-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
 </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">JATIN KUMAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<body class="bg-light">
+    <div class="min-vh-100">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section py-5 text-center">
+            <div class="hero-content">
+                <img src="https://source.unsplash.com/random/150x150/?portrait" alt="JATIN KUMAR" class="profile-pic">
+                <h1 class="display-4 fw-bold mb-4">JATIN KUMAR</h1>
+                <p class="lead mb-4">Full Stack Developer | UI/UX Enthusiast | Problem Solver</p>
+                <div>
+                    <a href="#" class="btn btn-primary me-2" download>Download CV</a>
+                    <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- Hero Section -->
-  <section class="container text-center py-5">
-    <h1 class="display-4 fw-bold">JATIN KUMAR</h1>
-    <p class="lead">Full Stack Developer | UI/UX Enthusiast | Problem Solver</p>
-    <button class="btn btn-primary me-2">Download Resume</button>
-    <button class="btn btn-outline-secondary">Contact Me</button>
-  </section>
+        <!-- About Me Section -->
+        <section id="about" class="container py-5 content-section" data-aos="fade-up">
+            <h2 class="text-center mb-4">About Me</h2>
+            <p class="text-center mx-auto" style="max-width: 600px;">
+                I'm a passionate full-stack developer with 5 years of experience in creating robust and scalable web applications. 
+                I love turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, you'll find me 
+                exploring new technologies or contributing to open-source projects.
+            </p>
+        </section>
 
-  <!-- About Me Section -->
-  <section class="container py-5">
-    <h2 class="text-center fw-semibold">About Me</h2>
-    <p class="text-center mx-auto" style="max-width: 600px;">
-      I'm a passionate full-stack developer with 5 years of experience in creating robust and scalable web applications.
-      I love turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, you'll find me
-      exploring new technologies or contributing to open-source projects.
-    </p>
-  </section>
+        <!-- Skills Section -->
+        <section id="skills" class="py-5 content-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-4">Skills</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <h5>JavaScript</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h5>React</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h5>Node.js</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h5>Python</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Skills Section -->
-  <section class="container bg-white text-center py-5">
-    <h2 class="fw-semibold">Skills</h2>
-    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 py-4">
-      <div class="col" *ngFor="let skill of skills">
-        <div class="card p-3 shadow-sm">
-          <h5 class="card-title">JavaScript</h5>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card p-3 shadow-sm">
-          <h5 class="card-title">React</h5>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card p-3 shadow-sm">
-          <h5 class="card-title">Node.js</h5>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card p-3 shadow-sm">
-          <h5 class="card-title">Python</h5>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card p-3 shadow-sm">
-          <h5 class="card-title">SQL</h5>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card p-3 shadow-sm">
-          <h5 class="card-title">GraphQL</h5>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card p-3 shadow-sm">
-          <h5 class="card-title">AWS</h5>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card p-3 shadow-sm">
-          <h5 class="card-title">Docker</h5>
-        </div>
-      </div>
+        <!-- Projects Section -->
+        <section id="projects" class="py-5 content-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-4">Projects</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://source.unsplash.com/random/400x300/?ecommerce" class="card-img-top" alt="E-commerce Platform">
+                            <div class="card-body">
+                                <h5 class="card-title">E-commerce Platform</h5>
+                                <p class="card-text">A full-stack e-commerce solution built with React and Node.js</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#projectModal1">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://source.unsplash.com/random/400x300/?mobile-app" class="card-img-top" alt="Task Management App">
+                            <div class="card-body">
+                                <h5 class="card-title">Task Management App</h5>
+                                <p class="card-text">A React Native mobile app for efficient task management</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#projectModal2">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://source.unsplash.com/random/400x300/?data-visualization" class="card-img-top" alt="Data Visualization Dashboard">
+                            <div class="card-body">
+                                <h5 class="card-title">Data Visualization Dashboard</h5>
+                                <p class="card-text">An interactive dashboard using D3.js and React</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#projectModal3">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-5 content-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-4">Testimonials</h2>
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-card">
+                                <p>"JATIN KUMAR is an exceptional developer. His attention to detail and problem-solving skills are unmatched."</p>
+                                <footer class="blockquote-footer">Sarah JATIN KUMAR, Project Manager</footer>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <p>"Working with JATIN KUMAR was a pleasure. He delivered high-quality code on time and was always ready to tackle new challenges."</p>
+                                <footer class="blockquote-footer">Mike Thompson, CTO</footer>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <p>"JATIN KUMAR's expertise in both front-end and back-end development made our project a success. Highly recommended!"</p>
+                                <footer class="blockquote-footer">Emily Davis, Product Owner</footer>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="bg-white py-5 content-section" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-4">Get in Touch</h2>
+                <form id="contactForm" class="mx-auto" style="max-width: 500px;">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-4 text-center">
+            <div class="container">
+                <div class="mb-3">
+                    <a href="#" class="me-3 social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="me-3 social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="me-3 social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-phone"></i></a>
+                </div>
+                <p class="text-muted">© 2024 JATIN KUMAR. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section class="container py-5">
-    <h2 class="text-center fw-semibold">Projects</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 py-4">
-      <div class="col">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">E-commerce Platform</h5>
-            <p class="card-text">A full-stack e-commerce solution built with React and Node.js</p>
-            <button class="btn btn-outline-secondary">View Project</button>
-          </div>
+    <!-- Project Modals -->
+    <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+        <div class="modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModal1Label">E-commerce Platform</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/random/800x600/?ecommerce" class="img-fluid mb-3" alt="E-commerce Platform">
+                    <p>This full-stack e-commerce solution was built using React for the front-end and Node.js for the back-end. Key features include:</p>
+                    <ul>
+                        <li>Responsive design for mobile and desktop</li>
+                        <li>User authentication and authorization</li>
+                        <li>Product catalog with search and filter functionality</li>
+                        <li>Shopping cart and checkout process</li>
+                        <li>Order management and tracking</li>
+                        <li>Integration with payment gateways</li>
+                    </ul>
+                    <p>Technologies used: React, Redux, Node.js, Express, MongoDB, Stripe API</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary">View Live Demo</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Task Management App</h5>
-            <p class="card-text">A React Native mobile app for efficient task management</p>
-            <button class="btn btn-outline-secondary">View Project</button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Data Visualization Dashboard</h5>
-            <p class="card-text">An interactive dashboard using D3.js and React</p>
-            <button class="btn btn-outline-secondary">View Project</button>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Contact Form Section -->
-  <section class="container bg-white py-5">
-    <h2 class="text-center fw-semibold">Get in Touch</h2>
-    <form onsubmit="handleSubmit(event)" class="mx-auto" style="max-width: 500px;">
-      <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Message</label>
-        <textarea class="form-control" id="message" rows="3" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-  </section>
+    <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModal2Label">Task Management App</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/random/800x600/?mobile-app" class="img-fluid mb-3" alt="Task Management App">
+                    <p>This React Native mobile app provides efficient task management for individuals and teams. Key features include:</p>
+                    <ul>
+                        <li>Cross-platform compatibility (iOS and Android)</li>
+                        <li>User-friendly interface with intuitive gestures</li>
+                        <li>Task creation, editing, and deletion</li>
+                        <li>Task categorization and priority setting</li>
+                        <li>Due date reminders and notifications</li>
+                        <li>Team collaboration features</li>
+                    </ul>
+                    <p>Technologies used: React Native, Redux, Firebase, Push Notifications</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary">View on App Store</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <!-- Footer -->
-<footer class="container-fluid py-4 bg-light text-center">
-  <div class="d-flex justify-content-center mb-3 flex-wrap">
-    <a href="#" class="text-secondary mx-3 my-2"><i class="bi bi-github h5"></i></a>
-    <a href="#" class="text-secondary mx-3 my-2"><i class="bi bi-linkedin h5"></i></a>
-    <a href="#" class="text-secondary mx-3 my-2"><i class="bi bi-envelope h5"></i></a>
-    <a href="#" class="text-secondary mx-3 my-2"><i class="bi bi-phone h5"></i></a>
-  </div>
-  <p class="text-muted small">&copy; 2024 JATIN KUMAR. All rights reserved.</p>
-</footer>
+    <div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModal3Label">Data Visualization Dashboard</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/random/800x600/?data-visualization" class="img-fluid mb-3" alt="Data Visualization Dashboard">
+                    <p>This interactive dashboard uses D3.js and React to visualize complex datasets. Key features include:</p>
+                    <ul>
+                        <li>Real-time data updates</li>
+                        <li>Multiple chart types (line, bar, pie, scatter plot)</li>
+                        <li>Interactive filters and drill-down capabilities</li>
+                        <li>Responsive design for various screen sizes</li>
+                        <li>Data export functionality</li>
+                        <li>Customizable color schemes and layouts</li>
+                    </ul>
+                    <p>Technologies used: React, D3.js, WebSocket, Node.js, Express</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary">View Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- Bootstrap Icons -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <button id="back-to-top" class="btn btn-primary" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-      console.log("Form submitted:", { name, email, message });
-      document.getElementById("name").value = '';
-      document.getElementById("email").value = '';
-      document.getElementById("message").value = '';
-    }
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init();
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Navbar color change on scroll
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.querySelector('.navbar').classList.add('scrolled');
+                } else {
+                    document.querySelector('.navbar').classList.remove('scrolled');
+                }
+            });
+
+            // Back to top button
+            var backToTopButton = document.getElementById("back-to-top");
+            window.onscroll = function() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            };
+
+            backToTopButton.addEventListener("click", function() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            });
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would typically send the form data to a server
+                console.log('Form submitted:', { name, email, message });
+                
+                // Reset form fields
+                contactForm.reset();
+                
+                // Show a success message (you can replace this with a more user-friendly notification)
+                alert('Thank you for your message. We\'ll get back to you soon!');
+            });
+        });
+    </script>
 </body>
-
 </html>
